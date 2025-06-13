@@ -1,0 +1,128 @@
+
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail } from "lucide-react";
+import { toast } from "sonner";
+
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast.success("Message sent successfully! I'll get back to you soon.");
+    setFormData({ name: "", email: "", message: "" });
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  return (
+    <section id="contact" className="py-20 bg-portfolio-gradient relative overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute top-20 right-10 w-24 h-24 bg-white/10 rounded-full animate-float"></div>
+      <div className="absolute bottom-20 left-10 w-16 h-16 bg-portfolio-accent/20 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
+      
+      <div className="container mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="text-white animate-fade-in">
+            <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+              <span className="text-white/90 text-sm font-medium">GET IN TOUCH</span>
+            </div>
+            
+            <h2 className="text-4xl font-bold mb-6">
+              Got A Project! Let's Talk
+            </h2>
+            
+            <p className="text-white/80 text-lg mb-8 leading-relaxed">
+              I'm always excited to discuss new opportunities and projects. Whether you have a question, 
+              a project idea, or just want to connect, feel free to reach out!
+            </p>
+            
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <p className="text-white/60 text-sm">Email me at</p>
+                  <a 
+                    href="mailto:meetsolanki8989@gmail.com" 
+                    className="text-white font-medium hover:text-portfolio-accent transition-colors"
+                  >
+                    meetsolanki8989@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-12">
+              <div className="text-6xl mb-4">🚀</div>
+              <p className="text-white/60">Ready to start something amazing together?</p>
+            </div>
+          </div>
+          
+          <div className="animate-fade-in">
+            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <Input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="bg-white/20 border-white/30 text-white placeholder:text-white/60 focus:border-portfolio-accent"
+                  />
+                </div>
+                
+                <div>
+                  <Input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="bg-white/20 border-white/30 text-white placeholder:text-white/60 focus:border-portfolio-accent"
+                  />
+                </div>
+                
+                <div>
+                  <Textarea
+                    name="message"
+                    placeholder="Your Message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={5}
+                    className="bg-white/20 border-white/30 text-white placeholder:text-white/60 focus:border-portfolio-accent resize-none"
+                  />
+                </div>
+                
+                <Button 
+                  type="submit"
+                  className="w-full bg-portfolio-accent hover:bg-portfolio-accent/90 text-white py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105"
+                >
+                  Send Message
+                </Button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
