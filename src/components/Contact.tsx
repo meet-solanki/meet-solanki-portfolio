@@ -1,10 +1,10 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail } from "lucide-react";
 import { toast } from "sonner";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,11 +12,36 @@ const Contact = () => {
     email: "",
     message: ""
   });
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent successfully! I'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+    setIsLoading(true);
+
+    try {
+      console.log("Sending email with EmailJS...");
+      
+      const result = await emailjs.send(
+        'service_dyvagam', // Service ID
+        'template_8rvu9eg', // Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_name: 'Meet Solanki',
+        },
+        '9UtgKZEeYy0huIoRX' // Public Key
+      );
+
+      console.log("Email sent successfully:", result);
+      toast.success("Message sent successfully! I'll get back to you soon.");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      toast.error("Failed to send message. Please try again or contact me directly at meetsolanki8989@gmail.com");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -112,9 +137,10 @@ const Contact = () => {
                 
                 <Button 
                   type="submit"
-                  className="w-full bg-portfolio-accent hover:bg-portfolio-accent/90 text-white py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105"
+                  disabled={isLoading}
+                  className="w-full bg-portfolio-accent hover:bg-portfolio-accent/90 text-white py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isLoading ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </div>
