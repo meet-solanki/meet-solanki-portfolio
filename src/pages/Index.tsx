@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white font-poppins">
+    <div className="min-h-screen bg-white dark:bg-gray-900 font-poppins transition-colors duration-300">
       <Header />
       <Hero />
       <About />
