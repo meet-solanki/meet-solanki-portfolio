@@ -1,21 +1,18 @@
 
-import { Moon, Sun } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { useTheme } from '@/components/ThemeProvider';
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <Button
-      variant="ghost"
-      size="sm"
+    <button
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-      className="h-8 w-8 px-0 hover:bg-gray-100 dark:hover:bg-gray-800 touch-manipulation"
+      className="relative h-10 w-10 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-300 ease-in-out flex items-center justify-center touch-manipulation focus:outline-none focus:ring-2 focus:ring-portfolio-primary focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+      aria-label="Toggle theme"
     >
-      <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-      <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-      <span className="sr-only">Toggle theme</span>
-    </Button>
+      <span className="text-xl transition-all duration-300 ease-in-out transform">
+        {theme === 'light' ? '🌞' : '🌙'}
+      </span>
+    </button>
   );
 }
