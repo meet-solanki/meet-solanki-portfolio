@@ -1,4 +1,3 @@
-
 const About = () => {
   return (
     <section id="about" className="py-20 bg-white dark:bg-gray-800">
@@ -17,9 +16,6 @@ const About = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="text-4xl mb-4">🎓</div>
-                <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">Education Journey</h3>
-                <p className="text-gray-600 dark:text-gray-300">Passionate learner & tech enthusiast</p>
               </div>
             </div>
           </div>
