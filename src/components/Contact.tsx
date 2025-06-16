@@ -1,8 +1,9 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail } from "lucide-react";
+import { Mail, Github, Linkedin } from "lucide-react";
 import { toast } from "sonner";
 import emailjs from '@emailjs/browser';
 
@@ -58,22 +59,22 @@ const Contact = () => {
       <div className="absolute bottom-20 left-10 w-16 h-16 bg-portfolio-accent/20 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
       
       <div className="container mx-auto px-4">
+        <div className="text-center mb-16 animate-fade-in">
+          <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+            <span className="text-white/90 text-sm font-medium">GET IN TOUCH</span>
+          </div>
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Get in Touch
+          </h2>
+          <p className="text-white/80 text-lg max-w-2xl mx-auto">
+            I'm always excited to discuss new opportunities and projects. Whether you have a question, 
+            a project idea, or just want to connect, feel free to reach out!
+          </p>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-white animate-fade-in">
-            <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-              <span className="text-white/90 text-sm font-medium">GET IN TOUCH</span>
-            </div>
-            
-            <h2 className="text-4xl font-bold mb-6">
-              Got A Project! Let's Talk
-            </h2>
-            
-            <p className="text-white/80 text-lg mb-8 leading-relaxed">
-              I'm always excited to discuss new opportunities and projects. Whether you have a question, 
-              a project idea, or just want to connect, feel free to reach out!
-            </p>
-            
-            <div className="space-y-6">
+            <div className="space-y-6 mb-8">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                   <Mail className="w-6 h-6 text-white" />
@@ -85,6 +86,36 @@ const Contact = () => {
                     className="text-white font-medium hover:text-portfolio-accent transition-colors"
                   >
                     meetsolanki8989@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                  <Linkedin className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <p className="text-white/60 text-sm">Connect on LinkedIn</p>
+                  <a 
+                    href="#" 
+                    className="text-white font-medium hover:text-portfolio-accent transition-colors"
+                  >
+                    linkedin.com/in/meetsolanki
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                  <Github className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <p className="text-white/60 text-sm">Check out my code</p>
+                  <a 
+                    href="#" 
+                    className="text-white font-medium hover:text-portfolio-accent transition-colors"
+                  >
+                    github.com/meetsolanki
                   </a>
                 </div>
               </div>
