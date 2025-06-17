@@ -28,7 +28,7 @@ const Hero = () => {
               BCA Student | Aspiring Full Stack Developer
             </h2>
             
-            <p className="text-xl text-white/80 mb-8 max-w-lg leading-relaxed">
+            <p className="text-xl text-white/80 mb-8 max-w-lg leading-relaxed mx-auto lg:mx-0 text-center">
               I'm passionate about building web apps, improving my communication skills, and constantly learning new technologies.
             </p>
             
@@ -41,8 +41,7 @@ const Hero = () => {
               </Button>
               <Button 
                 onClick={() => scrollToSection('contact')}
-                variant="outline" 
-                className="border-white/30 text-white hover:bg-white/10 px-8 py-3 rounded-full text-lg font-medium transition-all duration-300"
+                className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:shadow-lg"
               >
                 <Mail className="w-5 h-5 mr-2" />
                 📧 Contact Me
