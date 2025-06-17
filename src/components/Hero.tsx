@@ -51,15 +51,13 @@ const Hero = () => {
           </div>
           
           <div className="flex justify-center lg:justify-end animate-fade-in">
-            <div className="relative">
-              <div className="w-80 h-80 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center p-4 shadow-2xl">
-                <div className="w-72 h-72 rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
-                  <img 
-                    src="https://i.postimg.cc/zXtBVMFP/IMG-20250613-WA0000.jpg" 
-                    alt="Meet Solanki - Profile Picture"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-2xl">
+              <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-white/30 shadow-xl mx-auto">
+                <img 
+                  src="https://i.postimg.cc/zXtBVMFP/IMG-20250613-WA0000.jpg" 
+                  alt="Meet Solanki - Profile Picture"
+                  className="w-full h-full object-cover"
+                />
               </div>
               {/* Floating badges */}
               <div className="absolute -top-4 -right-4 bg-white rounded-full px-4 py-2 shadow-lg animate-float">

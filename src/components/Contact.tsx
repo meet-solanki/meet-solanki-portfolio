@@ -97,10 +97,12 @@ const Contact = () => {
                 <div>
                   <p className="text-white/60 text-sm">Connect on LinkedIn</p>
                   <a 
-                    href="#" 
+                    href="https://www.linkedin.com/in/meet-solanki-71403b36b" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-white font-medium hover:text-portfolio-accent transition-colors"
                   >
-                    linkedin.com/in/meetsolanki
+                    linkedin.com/in/meet-solanki-71403b36b
                   </a>
                 </div>
               </div>
@@ -112,10 +114,12 @@ const Contact = () => {
                 <div>
                   <p className="text-white/60 text-sm">Check out my code</p>
                   <a 
-                    href="#" 
+                    href="https://github.com/meet-solanki" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-white font-medium hover:text-portfolio-accent transition-colors"
                   >
-                    github.com/meetsolanki
+                    github.com/meet-solanki
                   </a>
                 </div>
               </div>
