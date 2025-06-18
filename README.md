@@ -32,8 +32,7 @@ I’m **Meet Solanki**, currently pursuing a **Bachelor of Computer Applications
 
 ---
 
-## 📂 How to Use or Customize
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/portfolio.git
-   cd portfolio
+📬 Contact Information
+📧 Email: meetsolanki8989@gmail.com
+
+🌐 Portfolio: meet-solanki-portfolio.lovable.app
