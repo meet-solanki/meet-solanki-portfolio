@@ -36,7 +36,7 @@ I’m **Meet Solanki**, currently pursuing a **Bachelor of Computer Applications
 📧 Email: meetsolanki8989@gmail.com
 
 🌐 Portfolio:   
-    meet-solanki-portfolio.lovable.app
+    https://meet-solanki-portfolio.lovable.app](https://meet-solanki-portfolio.lovable.app
 
 GitHub:
 https://github.com/meet-solanki
