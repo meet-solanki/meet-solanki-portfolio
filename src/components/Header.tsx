@@ -1,6 +1,5 @@
 
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Header = () => {
@@ -28,7 +27,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           <div className="text-2xl font-bold text-portfolio-primary dark:text-portfolio-primary">
-            MS
+            Meet
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
@@ -51,6 +50,12 @@ const Header = () => {
               Skills
             </button>
             <button 
+              onClick={() => scrollToSection('projects')}
+              className="text-gray-700 dark:text-gray-300 hover:text-portfolio-primary dark:hover:text-portfolio-primary transition-colors"
+            >
+              Projects
+            </button>
+            <button 
               onClick={() => scrollToSection('contact')}
               className="text-gray-700 dark:text-gray-300 hover:text-portfolio-primary dark:hover:text-portfolio-primary transition-colors"
             >
@@ -58,14 +63,8 @@ const Header = () => {
             </button>
           </nav>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center">
             <ThemeToggle />
-            <Button 
-              onClick={() => scrollToSection('contact')}
-              className="bg-portfolio-gradient hover:opacity-90 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
-            >
-              Get in Touch
-            </Button>
           </div>
         </div>
       </div>
