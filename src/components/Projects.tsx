@@ -1,10 +1,9 @@
-
 const Projects = () => {
   const projects = [
     {
       title: "Personal Portfolio Website",
       description: "A modern one-page portfolio website built with Lovable to showcase my skills and projects.",
-      techStack: ["HTML", "CSS", "Lovable", "Responsive Design"],
+      techStack: ["HTML", "CSS", "JavaScript", "PHP"],
       link: "https://meet-solanki-portfolio.lovable.app",
       type: "live"
     }

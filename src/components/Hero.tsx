@@ -58,6 +58,26 @@ const Hero = () => {
           
           <div className="flex justify-center lg:justify-end animate-fade-in">
             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-2xl relative">
+              {/* Social Icons Above Profile Photo */}
+              <div className="flex justify-center gap-4 mb-6">
+                <a
+                  href="https://github.com/meet-solanki"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white/20 backdrop-blur-sm p-3 rounded-full border border-white/30 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:bg-white/30"
+                >
+                  <Github className="w-6 h-6 text-white" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/meet-solanki"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white/20 backdrop-blur-sm p-3 rounded-full border border-white/30 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:bg-white/30"
+                >
+                  <Linkedin className="w-6 h-6 text-white" />
+                </a>
+              </div>
+              
               <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-white/30 shadow-xl mx-auto">
                 <img 
                   src="https://i.postimg.cc/zXtBVMFP/IMG-20250613-WA0000.jpg" 
