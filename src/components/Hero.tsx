@@ -27,28 +27,33 @@ const Hero = () => {
               </Button>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
               Hi, I'm Meet Solanki
             </h1>
             
             <h2 className="text-2xl md:text-3xl font-medium text-white/90 mb-6">
-              BCA Student | Aspiring Full Stack Developer
+              BCA Student
             </h2>
             
-            <p className="text-xl text-white/80 mb-8 max-w-lg leading-relaxed mx-auto lg:mx-auto text-center">
-              I'm passionate about building web apps, improving my communication skills, and constantly learning new technologies.
-            </p>
+            {/* Styled Paragraph Box */}
+            <div className="mb-8 max-w-lg mx-auto lg:mx-0">
+              <div className="bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg">
+                <p className="text-xl text-white/90 leading-relaxed">
+                  I'm passionate about building web apps, improving my communication skills, and constantly learning new technologies.
+                </p>
+              </div>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <Button 
-                className="bg-portfolio-accent hover:bg-portfolio-accent/90 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105"
+                className="bg-portfolio-accent hover:bg-portfolio-accent/90 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
                 <FileText className="w-5 h-5 mr-2" />
                 📄 View Resume
               </Button>
               <Button 
                 onClick={() => scrollToSection('contact')}
-                className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:shadow-lg"
+                className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:shadow-lg hover:scale-105"
               >
                 <Mail className="w-5 h-5 mr-2" />
                 📧 Contact Me
@@ -77,7 +82,7 @@ const Hero = () => {
           </div>
           
           <div className="flex justify-center lg:justify-end animate-fade-in">
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-2xl relative">
+            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-2xl relative">              
               <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-white/30 shadow-xl mx-auto">
                 <img 
                   src="https://i.postimg.cc/zXtBVMFP/IMG-20250613-WA0000.jpg" 
