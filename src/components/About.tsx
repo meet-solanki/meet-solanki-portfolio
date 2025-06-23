@@ -21,19 +21,11 @@ const About = () => {
               About Me
             </h2>
             
-            <p className="text-gray-600 dark:text-gray-300 text-lg mb-8 leading-relaxed max-w-3xl mx-auto">
-              I'm Meet Solanki, a BCA student at Shree Saraswati College of Commerce BBA & IT, Dhoraji. I'm passionate about programming, learning new technologies, and building responsive websites.
-            </p>
-            
-            <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6">
-              My Motivation
-            </h3>
-            
             <p className="text-gray-600 dark:text-gray-300 text-lg mb-12 leading-relaxed max-w-3xl mx-auto">
-              What drives me is the excitement of turning ideas into real, functional experiences through code. I'm motivated by continuous learning, solving problems creatively, and building things that make a difference. Every project is a step forward in becoming a better developer and a more thoughtful creator.
+              I'm Meet Solanki, a BCA student at Shree Saraswati College of Commerce BBA & IT, Dhoraji. I'm passionate about programming, learning new technologies, and building responsive, user-friendly websites. I enjoy solving real-world problems and constantly improving through hands-on experience.
             </p>
             
-            <div className="space-y-6 max-w-2xl mx-auto">
+            <div className="space-y-6 max-w-2xl mx-auto mb-12">
               <div className="bg-gray-50 dark:bg-gray-700 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-600 transition-all duration-300 hover:shadow-lg hover:scale-105 fade-in-on-scroll">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-portfolio-primary/10 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 hover:bg-portfolio-primary/20">
@@ -41,7 +33,7 @@ const About = () => {
                   </div>
                   <div className="text-left">
                     <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Goal-Oriented</h4>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">I always set clear objectives and focus on consistent growth through hands-on projects and continuous learning.</p>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">I set clear goals and stay focused on achieving them through consistent effort and improvement.</p>
                   </div>
                 </div>
               </div>
@@ -53,13 +45,21 @@ const About = () => {
                   </div>
                   <div className="text-left">
                     <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Innovative Thinking</h4>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">I enjoy approaching problems with creativity and exploring unique, efficient solutions using technology.</p>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">I enjoy exploring new ways to solve problems and bring fresh ideas into every project I work on.</p>
                   </div>
                 </div>
               </div>
             </div>
+
+            <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6">
+              My Motivation
+            </h3>
             
-            <div className="bg-gray-50 dark:bg-gray-700 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-600 max-w-2xl mx-auto mt-8 transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <p className="text-gray-600 dark:text-gray-300 text-lg mb-12 leading-relaxed max-w-3xl mx-auto">
+              I'm motivated by the excitement of bringing ideas to life through code. I enjoy working on creative and functional web projects that help people and make a real impact. Continuous learning, curiosity, and building for a purpose are what drive me.
+            </p>
+            
+            <div className="bg-gray-50 dark:bg-gray-700 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-600 max-w-2xl mx-auto transition-all duration-300 hover:shadow-lg hover:scale-105">
               <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-4">Education</h4>
               <div className="flex items-center gap-4 justify-center">
                 <div className="w-12 h-12 bg-portfolio-gradient rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
