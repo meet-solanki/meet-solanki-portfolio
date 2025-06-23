@@ -27,33 +27,40 @@ const Hero = () => {
               </Button>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight font-poppins">
               Hi, I'm Meet Solanki
             </h1>
             
-            <h2 className="text-2xl md:text-3xl font-medium text-white/90 mb-6">
+            <h2 className="text-2xl md:text-3xl font-medium text-white/90 mb-6 font-poppins">
               BCA Student
             </h2>
             
             {/* Styled Paragraph Box */}
-            <div className="mb-8 max-w-lg mx-auto lg:mx-0">
+            <div className="mb-6 max-w-lg mx-auto lg:mx-0">
               <div className="bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg">
-                <p className="text-xl text-white/90 leading-relaxed">
+                <p className="text-xl text-white/90 leading-relaxed font-poppins">
                   I'm passionate about building web apps, improving my communication skills, and constantly learning new technologies.
                 </p>
               </div>
             </div>
+
+            {/* Personal Reflection Block */}
+            <div className="mb-8 max-w-lg mx-auto lg:mx-0 animate-fade-in" style={{animationDelay: '0.3s'}}>
+              <blockquote className="text-white/80 text-base font-light italic leading-relaxed font-poppins border-l-2 border-white/30 pl-4">
+                "This portfolio represents more than just my work — it reflects my growth, curiosity, and commitment to learning. Every section is a small piece of who I am as a student and a developer."
+              </blockquote>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
               <Button 
-                className="bg-portfolio-accent hover:bg-portfolio-accent/90 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="bg-portfolio-accent hover:bg-portfolio-accent/90 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg font-poppins"
               >
                 <FileText className="w-5 h-5 mr-2" />
                 📄 View Resume
               </Button>
               <Button 
                 onClick={() => scrollToSection('contact')}
-                className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:shadow-lg hover:scale-105"
+                className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:shadow-lg hover:scale-105 font-poppins"
               >
                 <Mail className="w-5 h-5 mr-2" />
                 📧 Contact Me
