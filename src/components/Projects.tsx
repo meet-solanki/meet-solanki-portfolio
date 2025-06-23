@@ -1,5 +1,6 @@
 
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { Github } from 'lucide-react';
 
 const Projects = () => {
   const sectionRef = useScrollAnimation();
@@ -7,9 +8,10 @@ const Projects = () => {
   const projects = [
     {
       title: "Personal Portfolio Website",
-      description: "A modern one-page portfolio website built with Lovable to showcase my skills and projects.",
-      techStack: ["HTML", "CSS", "JavaScript", "PHP"],
+      description: "A modern, responsive personal website built to showcase my skills, projects, and contact information.",
+      techStack: ["HTML", "CSS", "JavaScript"],
       link: "https://meet-solanki-portfolio.lovable.app",
+      githubLink: "https://github.com/meet-solanki",
       type: "live"
     }
   ];
@@ -37,15 +39,27 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 group animate-fade-in border border-gray-100 dark:border-gray-700 btn-hover-effect"
+              className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 group animate-fade-in border border-gray-100 dark:border-gray-700 btn-hover-effect relative"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
+              {/* GitHub Icon in top-right corner */}
+              <div className="absolute top-4 right-4">
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-100 dark:bg-gray-800 p-2 rounded-full border border-gray-200 dark:border-gray-600 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:bg-gray-200 dark:hover:bg-gray-700"
+                >
+                  <Github className="w-4 h-4 text-gray-600 dark:text-gray-400" />
+                </a>
+              </div>
+
               <div className="mb-4">
                 <div className="w-16 h-16 bg-portfolio-gradient rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-2xl">🌐</span>
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-3 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-3 transition-colors duration-300 pr-8">
                   {project.title}
                 </h3>
                 
@@ -75,7 +89,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-full bg-portfolio-gradient hover:opacity-90 text-white px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 text-sm font-medium btn-hover-effect"
                 >
-                  View Project
+                  View Live
                 </a>
               </div>
             </div>

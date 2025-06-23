@@ -44,7 +44,7 @@ const Hero = () => {
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
               <Button 
                 className="bg-portfolio-accent hover:bg-portfolio-accent/90 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
@@ -89,14 +89,6 @@ const Hero = () => {
                   alt="Meet Solanki - Profile Picture"
                   className="w-full h-full object-cover"
                 />
-              </div>
-              
-              {/* Floating badges */}
-              <div className="absolute -top-4 -right-4 bg-white rounded-full px-4 py-2 shadow-lg animate-float">
-                <span className="text-portfolio-primary font-semibold">2026 Graduate</span>
-              </div>
-              <div className="absolute -bottom-4 -left-4 bg-portfolio-accent rounded-full px-4 py-2 shadow-lg animate-float" style={{animationDelay: '1s'}}>
-                <span className="text-white font-semibold">BCA Student</span>
               </div>
             </div>
           </div>
