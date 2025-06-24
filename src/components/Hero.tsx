@@ -101,6 +101,13 @@ const Hero = () => {
           </div>
         </div>
         
+        {/* Inspiring Reflection - Bottom Left Corner */}
+        <div className="absolute bottom-8 left-8 animate-slide-in-left" style={{animationDelay: '0.5s'}}>
+          <p className="text-sm italic text-white/70 dark:text-gray-300 font-poppins">
+            BCA Student | Growing through code & curiosity.
+          </p>
+        </div>
+        
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <ChevronDown className="w-8 h-8 text-white/70" />
         </div>
