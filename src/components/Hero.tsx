@@ -27,7 +27,7 @@ const Hero = () => {
               </Button>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight font-poppins">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight font-poppins bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
               Hi, I'm Meet Solanki
             </h1>
             
@@ -35,13 +35,11 @@ const Hero = () => {
               BCA Student
             </h2>
             
-            {/* Styled Paragraph Box */}
-            <div className="mb-6 max-w-lg mx-auto lg:mx-0">
-              <div className="bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg">
-                <p className="text-xl text-white/90 leading-relaxed font-poppins">
-                  I'm passionate about building web apps, improving my communication skills, and constantly learning new technologies.
-                </p>
-              </div>
+            {/* Updated Paragraph */}
+            <div className="mb-6 max-w-[60%] lg:max-w-[60%] sm:max-w-[90%] mx-auto lg:mx-0 mt-4">
+              <p className="text-lg md:text-[18px] sm:text-[16px] text-white/90 leading-[1.6] font-poppins text-left animate-fade-in" style={{animationDelay: '0.2s'}}>
+                I'm Meet Solanki, a passionate BCA student eager to build modern digital experiences. Currently learning and growing my skills in frontend development, communication, and problem-solving.
+              </p>
             </div>
 
             {/* Personal Reflection Block */}
@@ -53,27 +51,27 @@ const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
               <Button 
-                className="bg-portfolio-accent hover:bg-portfolio-accent/90 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg font-poppins"
+                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg font-poppins"
               >
                 <FileText className="w-5 h-5 mr-2" />
                 📄 View Resume
               </Button>
               <Button 
                 onClick={() => scrollToSection('contact')}
-                className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:shadow-lg hover:scale-105 font-poppins"
+                className="bg-gradient-to-r from-yellow-400 to-orange-400 hover:from-yellow-500 hover:to-orange-500 text-black px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:shadow-lg hover:scale-105 font-poppins"
               >
                 <Mail className="w-5 h-5 mr-2" />
                 📧 Contact Me
               </Button>
             </div>
 
-            {/* Social Icons Below Buttons */}
+            {/* Social Icons Below Buttons - Clean without reflections */}
             <div className="flex justify-center lg:justify-start gap-4">
               <a
                 href="https://github.com/meet-solanki"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/20 backdrop-blur-sm p-3 rounded-full border border-white/30 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:bg-white/30"
+                className="bg-white/20 backdrop-blur-sm p-3 rounded-full border border-white/30 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:bg-gradient-to-r hover:from-purple-500/30 hover:to-pink-500/30"
               >
                 <Github className="w-6 h-6 text-white" />
               </a>
@@ -81,7 +79,7 @@ const Hero = () => {
                 href="https://www.linkedin.com/in/meet-solanki-71403b36b"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/20 backdrop-blur-sm p-3 rounded-full border border-white/30 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:bg-white/30"
+                className="bg-white/20 backdrop-blur-sm p-3 rounded-full border border-white/30 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:bg-gradient-to-r hover:from-blue-500/30 hover:to-cyan-500/30"
               >
                 <Linkedin className="w-6 h-6 text-white" />
               </a>

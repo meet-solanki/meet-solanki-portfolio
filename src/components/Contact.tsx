@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin, Phone } from "lucide-react";
 import { toast } from "sonner";
 import emailjs from '@emailjs/browser';
 
@@ -63,7 +63,7 @@ const Contact = () => {
           <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
             <span className="text-white/90 text-sm font-medium">GET IN TOUCH</span>
           </div>
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent mb-4 font-poppins">
             Get in Touch
           </h2>
           <p className="text-white/80 text-lg max-w-2xl mx-auto">
@@ -76,14 +76,14 @@ const Contact = () => {
           <div className="text-white animate-fade-in">
             <div className="space-y-6 mb-8">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-pink-500/20 to-purple-500/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                   <Mail className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <p className="text-white/60 text-sm">Email me at</p>
                   <a 
                     href="mailto:meetsolanki8989@gmail.com" 
-                    className="text-white font-medium hover:text-portfolio-accent transition-colors"
+                    className="text-white font-medium hover:bg-gradient-to-r hover:from-pink-400 hover:to-purple-400 hover:bg-clip-text hover:text-transparent transition-all duration-300"
                   >
                     meetsolanki8989@gmail.com
                   </a>
@@ -91,7 +91,22 @@ const Contact = () => {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500/20 to-teal-500/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <p className="text-white/60 text-sm">📱 Mobile</p>
+                  <a 
+                    href="tel:+917016559112" 
+                    className="text-white font-medium hover:bg-gradient-to-r hover:from-green-400 hover:to-teal-400 hover:bg-clip-text hover:text-transparent transition-all duration-300 text-[16px] md:text-[18px]"
+                  >
+                    +91 70165 59112
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                   <Linkedin className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -100,7 +115,7 @@ const Contact = () => {
                     href="https://www.linkedin.com/in/meet-solanki-71403b36b" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white font-medium hover:text-portfolio-accent transition-colors"
+                    className="text-white font-medium hover:bg-gradient-to-r hover:from-blue-400 hover:to-cyan-400 hover:bg-clip-text hover:text-transparent transition-all duration-300"
                   >
                     linkedin.com/in/meet-solanki-71403b36b
                   </a>
@@ -108,7 +123,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                   <Github className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -117,7 +132,7 @@ const Contact = () => {
                     href="https://github.com/meet-solanki" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white font-medium hover:text-portfolio-accent transition-colors"
+                    className="text-white font-medium hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-400 hover:bg-clip-text hover:text-transparent transition-all duration-300"
                   >
                     github.com/meet-solanki
                   </a>
@@ -173,7 +188,7 @@ const Contact = () => {
                 <Button 
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-portfolio-accent hover:bg-portfolio-accent/90 text-white py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isLoading ? "Sending..." : "Send Message"}
                 </Button>
